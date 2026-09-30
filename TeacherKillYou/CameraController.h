@@ -10,7 +10,7 @@ enum class CameraType {
 class CameraController {
 public:
     CameraController();
-
+    void Init();
     void Update();
     void SetActiveCamera(CameraType type);
 

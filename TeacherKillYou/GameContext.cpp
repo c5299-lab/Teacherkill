@@ -2,12 +2,16 @@
 #include "raylib.h"
 #include "rlImGui.h"
 #include "ResourceManager.h"
+#include "imgui.h"
 
 void GameContext::Init() {
     InitWindow(screenWidth_, screenHeight_, u8"学校脱出 3D");
     SetTargetFPS(60);
 
     rlImGuiSetup(true);
+
+    ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange;
+    cameraController_.Init();
 
     // アセットの一括ロード（これでキーを使って呼び出せる状態になる）
     RM().LoadAll();
