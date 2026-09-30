@@ -24,7 +24,6 @@ void GameContext::Draw() {
     BeginMode3D(cameraController_.GetActiveRaylibCamera());
     DrawGrid(20, 1.0f);
 
-    // ★どのクラスからでも キー を使ってモデルを取得できる
     playerModel = RM().GetModel(ResourceKeys::Model_Player);
     DrawModel(playerModel, Vector3{ 0.0f, 0.0f, 0.0f }, 1.0f, WHITE);
 
