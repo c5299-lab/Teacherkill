@@ -15,8 +15,8 @@ public:
 private:
     CameraController cameraController_;
     DebugUI debugUI_; // デバッグUIクラスの保持
-    const int screenWidth_ = 1280;
-    const int screenHeight_ = 720;
+    const int screenWidth_ = 1920;
+    const int screenHeight_ = 1080;
 
     Model playerModel;
 

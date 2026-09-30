@@ -4,7 +4,7 @@
 #include "ResourceManager.h"
 
 void GameContext::Init() {
-    InitWindow(screenWidth_, screenHeight_, "ŠwZ’Eo 3D");
+    InitWindow(screenWidth_, screenHeight_, u8"ŠwZ’Eo 3D");
     SetTargetFPS(60);
 
     rlImGuiSetup(true);
