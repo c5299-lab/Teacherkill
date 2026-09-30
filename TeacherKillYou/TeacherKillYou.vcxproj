@@ -156,7 +156,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\2年後期製作\Teacherkill\TeacherKillYou\imgui;C:\2年後期製作\Teacherkill\TeacherKillYou\imguizmo;C:\2年後期製作\Teacherkill\TeacherKillYou\nlohmann;C:\2年後期製作\Teacherkill\TeacherKillYou\rlImGui;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\2年後期製作\Teacherkill\TeacherKillYou\imgui;C:\2年後期製作\Teacherkill\TeacherKillYou\imguizmo;C:\2年後期製作\Teacherkill\TeacherKillYou\nlohmann;C:\2年後期製作\Teacherkill\TeacherKillYou\rlImGui;D:\OIC\Seisaku\Teacherkill\TeacherKillYou\rlImGui;D:\OIC\Seisaku\Teacherkill\TeacherKillYou\imgui;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
