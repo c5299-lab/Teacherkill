@@ -21,6 +21,55 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraController.cpp" />
+    <ClCompile Include="DebugUI.cpp" />
+    <ClCompile Include="GameContext.cpp" />
+    <ClCompile Include="imguizmo\GraphEditor.cpp" />
+    <ClCompile Include="imguizmo\ImCurveEdit.cpp" />
+    <ClCompile Include="imguizmo\ImGradient.cpp" />
+    <ClCompile Include="imguizmo\ImGuizmo.cpp" />
+    <ClCompile Include="imguizmo\ImSequencer.cpp" />
+    <ClCompile Include="imguizmo\ImVectorEditor.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlayerCamera.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="rlImGui\rlImGui.cpp" />
+    <ClCompile Include="SystemCamera.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraController.h" />
+    <ClInclude Include="DebugUI.h" />
+    <ClInclude Include="GameContext.h" />
+    <ClInclude Include="ICamera.h" />
+    <ClInclude Include="imguizmo\GraphEditor.h" />
+    <ClInclude Include="imguizmo\ImCurveEdit.h" />
+    <ClInclude Include="imguizmo\ImGradient.h" />
+    <ClInclude Include="imguizmo\ImGuizmo.h" />
+    <ClInclude Include="imguizmo\ImLightRig.h" />
+    <ClInclude Include="imguizmo\ImSequencer.h" />
+    <ClInclude Include="imguizmo\ImVectorEditor.h" />
+    <ClInclude Include="imguizmo\ImZoomSlider.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_raylib.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="nlohmann\json.hpp" />
+    <ClInclude Include="nlohmann\json_fwd.hpp" />
+    <ClInclude Include="PlayerCamera.h" />
+    <ClInclude Include="ResourceKeys.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="rlImGui\rlImGui.h" />
+    <ClInclude Include="SystemCamera.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -79,6 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\2年後期製作\Teacherkill\TeacherKillYou\imgui;C:\2年後期製作\Teacherkill\TeacherKillYou\imguizmo;C:\2年後期製作\Teacherkill\TeacherKillYou\nlohmann;C:\2年後期製作\Teacherkill\TeacherKillYou\rlImGui;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,6 +143,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\2年後期製作\Teacherkill\TeacherKillYou\imgui;C:\2年後期製作\Teacherkill\TeacherKillYou\imguizmo;C:\2年後期製作\Teacherkill\TeacherKillYou\nlohmann;C:\2年後期製作\Teacherkill\TeacherKillYou\rlImGui;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,6 +156,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\2年後期製作\Teacherkill\TeacherKillYou\imgui;C:\2年後期製作\Teacherkill\TeacherKillYou\imguizmo;C:\2年後期製作\Teacherkill\TeacherKillYou\nlohmann;C:\2年後期製作\Teacherkill\TeacherKillYou\rlImGui;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +171,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\2年後期製作\Teacherkill\TeacherKillYou\imgui;C:\2年後期製作\Teacherkill\TeacherKillYou\imguizmo;C:\2年後期製作\Teacherkill\TeacherKillYou\nlohmann;C:\2年後期製作\Teacherkill\TeacherKillYou\rlImGui;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
