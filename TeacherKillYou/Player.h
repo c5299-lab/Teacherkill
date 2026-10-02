@@ -21,9 +21,17 @@ public:
 
 private:
     Vector3 position_{ 0.0f, 0.0f, 0.0f };
+    Vector3 velocity_{ 0.0f, 0.0f, 0.0f };
     float moveSpeed_{ 5.0f };
 
     // プレイヤーの当たり判定用パラメータ（半径と高さ）
     float playerRadius_{ 0.4f }; // 半径（横幅）
     float playerHeight_{ 1.8f }; // 高さ
+
+	//プレイヤーの重力加速度
+	float gravity_{ -9.81f }; // 重力加速度
+	float jumpForce_{ 3.0f }; // ジャンプ力
+
+	bool isGrounded_{ false }; // 地面に接地しているかどうかのフラグ
+
 };
