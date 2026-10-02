@@ -60,6 +60,15 @@
     <Filter Include="Scene\Title">
       <UniqueIdentifier>{422dc4e7-5af5-4909-a173-42c49388f666}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GamePlay">
+      <UniqueIdentifier>{69fb6a87-aef4-4b3c-a0a7-644c5cee22be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\Actors">
+      <UniqueIdentifier>{f1c45c8c-3ca7-4687-9d2a-5fd337abca1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\Actors\Player">
+      <UniqueIdentifier>{81b67e50-89f0-4e85-9ed3-3e374efd8d31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -130,6 +139,9 @@
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GamePlay\Actors\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +234,9 @@
     </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GamePlay\Actors\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -25,7 +25,9 @@ void CameraController::Update() {
 #endif
 
     // 現在のアクティブカメラの更新
-    if (currentCamera_) {
+    if (activeType_ == CameraType::Player) {
+        playerCamera_.Update(); // プレイヤー位置は既に設定されている
+    } else if (currentCamera_) {
         currentCamera_->Update();
     }
 }

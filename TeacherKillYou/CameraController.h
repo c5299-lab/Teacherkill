@@ -17,6 +17,8 @@ public:
     CameraType GetActiveType() const { return activeType_; }
     const Camera3D& GetActiveRaylibCamera() const;
 
+    PlayerCamera& GetPlayerCamera() { return playerCamera_; }
+
 private:
     PlayerCamera playerCamera_;
     SystemCamera systemCamera_;
