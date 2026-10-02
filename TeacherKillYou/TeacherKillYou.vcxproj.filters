@@ -48,6 +48,30 @@
     <Filter Include="Resource">
       <UniqueIdentifier>{a0e187d4-8691-4c14-97bc-6876b18b45be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{ae573a7f-1e1f-4ccf-85ba-826b2d57fd23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Base">
+      <UniqueIdentifier>{5588b051-3f09-4639-aee9-ff733ffbab9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Game">
+      <UniqueIdentifier>{9306c68e-6a07-4f4c-bfd9-a34b3adf17e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Title">
+      <UniqueIdentifier>{422dc4e7-5af5-4909-a173-42c49388f666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay">
+      <UniqueIdentifier>{69fb6a87-aef4-4b3c-a0a7-644c5cee22be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\Actors">
+      <UniqueIdentifier>{f1c45c8c-3ca7-4687-9d2a-5fd337abca1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\Actors\Player">
+      <UniqueIdentifier>{81b67e50-89f0-4e85-9ed3-3e374efd8d31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePlay\Actors\Stage">
+      <UniqueIdentifier>{7205009e-35ae-41ed-a5b1-1dafca18c345}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -109,6 +133,21 @@
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
       <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Scene\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GamePlay\Actors\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>GamePlay\Actors\Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +228,24 @@
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
       <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Scene\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GamePlay\Actors\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>GamePlay\Actors\Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,45 +1,53 @@
 #include "GameContext.h"
-#include "raylib.h"
-#include "rlImGui.h"
 #include "ResourceManager.h"
+#include "ResourceKeys.h"
+#include "raylib.h"
 
-void GameContext::Init() {
-    InitWindow(screenWidth_, screenHeight_, "学校脱出 3D");
-    SetTargetFPS(60);
-
-    rlImGuiSetup(true);
-
-    // アセットの一括ロード（これでキーを使って呼び出せる状態になる）
-    RM().LoadAll();
+void GameContext::Init()
+{
+    // カメラコントローラーの初期化（ウィンドウ生成後に呼ばれ、PlayerCameraとカーソル非表示を確定させる）
+    cameraController_.Init();
+	player_.Init();
+    stage_.Init();
 }
 
-void GameContext::Update() {
+void GameContext::Reset()
+{
+	player_.Reset();
+    stage_.Reset();
+}
+
+void GameContext::Update(float deltaTime)
+{
+    // 1. カメラの向きを取得
+    Vector3 forward = cameraController_.GetPlayerCamera().GetForwardVector();
+    Vector3 right = cameraController_.GetPlayerCamera().GetRightVector();
+
+    // 2. プレイヤーの移動（ステージとの当たり判定を含めて更新）
+    player_.Update(deltaTime, stage_, forward, right);
+
+    // 3. ステージの更新
+    stage_.Update(deltaTime);
+
+    // 4. カメラを移動後のプレイヤーに追従させて更新
+    cameraController_.GetPlayerCamera().SetPlayerPosition(player_.GetPosition());
     cameraController_.Update();
 }
 
-void GameContext::Draw() {
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
-
+void GameContext::Draw() const
+{
     BeginMode3D(cameraController_.GetActiveRaylibCamera());
+
     DrawGrid(20, 1.0f);
 
-    // ★どのクラスからでも キー を使ってモデルを取得できる
-    playerModel = RM().GetModel(ResourceKeys::Model_Player);
-    DrawModel(playerModel, Vector3{ 0.0f, 0.0f, 0.0f }, 1.0f, WHITE);
+    stage_.Draw();
+    player_.Draw();
 
     EndMode3D();
-
-    rlImGuiBegin();
-    debugUI_.Draw(cameraController_);
-    rlImGuiEnd();
-
-    EndDrawing();
 }
 
-void GameContext::End() {
-    RM().UnloadAll();
-
-    rlImGuiShutdown();
-    CloseWindow();
+void GameContext::End()
+{
+    player_.End();
+    stage_.End();
 }

@@ -10,12 +10,14 @@ enum class CameraType {
 class CameraController {
 public:
     CameraController();
-
+    void Init();
     void Update();
     void SetActiveCamera(CameraType type);
 
     CameraType GetActiveType() const { return activeType_; }
     const Camera3D& GetActiveRaylibCamera() const;
+
+    PlayerCamera& GetPlayerCamera() { return playerCamera_; }
 
 private:
     PlayerCamera playerCamera_;

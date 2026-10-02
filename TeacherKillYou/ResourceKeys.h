@@ -7,5 +7,10 @@ namespace ResourceKeys {
 
 	constexpr const char* Model_Player = "Model_Player";
 
+
+    // ステージのモデル
+    
+	constexpr const char* Model_Stage1 = "Model_Stage1";
+
     // 必要に応じてここに追加
 }
