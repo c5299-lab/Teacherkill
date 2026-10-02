@@ -43,6 +43,7 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="rlImGui\rlImGui.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="SystemCamera.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
@@ -76,6 +77,7 @@
     <ClInclude Include="rlImGui\rlImGui.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="SystemCamera.h" />
     <ClInclude Include="TitleScene.h" />
   </ItemGroup>

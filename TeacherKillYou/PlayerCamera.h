@@ -21,7 +21,7 @@ private:
     float eyeHeight_{ 1.6f };       // 目線の高さ（160cm付近）
     float sensitivity_{ 0.0025f };  // マウス感度
 
-    // カメラの現在の角度（ラジアン）
+    // カメラの現在の角度（ラジアン）5
     float yaw_{ 0.0f };             // 水平角度
     float pitch_{ 0.0f };           // 垂直角度
 };

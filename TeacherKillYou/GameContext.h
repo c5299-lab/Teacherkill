@@ -1,6 +1,7 @@
 #pragma once
 #include "CameraController.h"
 #include "Player.h"
+#include "Stage.h"
 
 class GameContext
 {
@@ -20,4 +21,5 @@ public:
 private:
     CameraController cameraController_;
     Player player_;
+    Stage stage_;
 };

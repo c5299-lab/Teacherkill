@@ -8,24 +8,29 @@ void GameContext::Init()
     // カメラコントローラーの初期化（ウィンドウ生成後に呼ばれ、PlayerCameraとカーソル非表示を確定させる）
     cameraController_.Init();
 	player_.Init();
+    stage_.Init();
 }
 
 void GameContext::Reset()
 {
 	player_.Reset();
+    stage_.Reset();
 }
 
 void GameContext::Update(float deltaTime)
 {
-    // 1. カメラの向きに合わせてプレイヤーを動かす
+    // 1. カメラの向きを取得
     Vector3 forward = cameraController_.GetPlayerCamera().GetForwardVector();
     Vector3 right = cameraController_.GetPlayerCamera().GetRightVector();
-    player_.Update(deltaTime, forward, right);
 
-    // 2. プレイヤーの移動後位置をカメラに教える
+    // 2. プレイヤーの移動（ステージとの当たり判定を含めて更新）
+    player_.Update(deltaTime, stage_, forward, right);
+
+    // 3. ステージの更新
+    stage_.Update(deltaTime);
+
+    // 4. カメラを移動後のプレイヤーに追従させて更新
     cameraController_.GetPlayerCamera().SetPlayerPosition(player_.GetPosition());
-
-    // 3. カメラ全体のUpdate（Update() 1つのみ）を呼ぶ
     cameraController_.Update();
 }
 
@@ -35,6 +40,7 @@ void GameContext::Draw() const
 
     DrawGrid(20, 1.0f);
 
+    stage_.Draw();
     player_.Draw();
 
     EndMode3D();
@@ -43,4 +49,5 @@ void GameContext::Draw() const
 void GameContext::End()
 {
     player_.End();
+    stage_.End();
 }
