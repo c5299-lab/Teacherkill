@@ -25,6 +25,7 @@
     <ClCompile Include="CameraController.cpp" />
     <ClCompile Include="DebugUI.cpp" />
     <ClCompile Include="GameContext.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="imguizmo\GraphEditor.cpp" />
     <ClCompile Include="imguizmo\ImCurveEdit.cpp" />
     <ClCompile Include="imguizmo\ImGradient.cpp" />
@@ -37,15 +38,20 @@
     <ClCompile Include="imgui\imgui_tables.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerCamera.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="rlImGui\rlImGui.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="SystemCamera.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraController.h" />
     <ClInclude Include="DebugUI.h" />
     <ClInclude Include="GameContext.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="ICamera.h" />
     <ClInclude Include="imguizmo\GraphEditor.h" />
     <ClInclude Include="imguizmo\ImCurveEdit.h" />
@@ -64,11 +70,16 @@
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="nlohmann\json.hpp" />
     <ClInclude Include="nlohmann\json_fwd.hpp" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerCamera.h" />
     <ClInclude Include="ResourceKeys.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="rlImGui\rlImGui.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="SystemCamera.h" />
+    <ClInclude Include="TitleScene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
